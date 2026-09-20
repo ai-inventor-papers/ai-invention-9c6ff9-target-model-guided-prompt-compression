@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "at": 1789911970.681344,
+  "dry_run": false,
+  "freed_bytes": 1427901082,
+  "skipped": "",
+  "removed": [
+    {
+      "path": ".venv",
+      "source": "structural",
+      "category": "cache",
+      "reason": "virtualenv (pyvenv.cfg)",
+      "size_bytes": 1427901082
+    }
+  ],
+  "refused": []
+}
