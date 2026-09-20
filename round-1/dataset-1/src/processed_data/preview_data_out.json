@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "source": "LongBench (Xnhyacinth/LongBench on HuggingFace)",
+    "tokenizer": "meta-llama/Meta-Llama-3-8B",
+    "description": "Long-context benchmark for prompt compression evaluation",
+    "compression_budgets": {
+      "2x": 0.5,
+      "4x": 0.25,
+      "8x": 0.125
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "longbench_narrativeqa",
+      "examples": [
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "He is a guest in the home of the Mulvilles.",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_0",
+          "metadata_original_token_count": 31361,
+          "metadata_compression_budget_2x": 15680,
+          "metadata_compression_budget_4x": 7840,
+          "metadata_compression_budget_8x": 3920,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "Because she is in unrequited love with someone else",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_1",
+          "metadata_original_token_count": 31405,
+          "metadata_compression_budget_2x": 15702,
+          "metadata_compression_budget_4x": 7851,
+          "metadata_compression_budget_8x": 3925,
+          "metadata_split": "holdout",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "The Atlas Mountains",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_2",
+          "metadata_original_token_count": 8040,
+          "metadata_compression_budget_2x": 4020,
+          "metadata_compression_budget_4x": 2010,
+          "metadata_compression_budget_8x": 1005,
+          "metadata_split": "mini",
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_qasper",
+      "examples": [
+        {
+          "input": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the informati...",
+          "output": "Ground truth is not established in the paper",
+          "metadata_task_name": "qasper",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "qasper_0",
+          "metadata_original_token_count": 3985,
+          "metadata_compression_budget_2x": 1992,
+          "metadata_compression_budget_4x": 996,
+          "metadata_compression_budget_8x": 498,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the informati...",
+          "output": "extension of the NetVLAD, adds Ghost clusters along with the NetVLAD clusters | An extension of NetVLAD which replaces hard assignment-based clustering with soft assignment-based clustering with the a...",
+          "metadata_task_name": "qasper",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "qasper_1",
+          "metadata_original_token_count": 3318,
+          "metadata_compression_budget_2x": 1659,
+          "metadata_compression_budget_4x": 829,
+          "metadata_compression_budget_8x": 414,
+          "metadata_split": "holdout",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the informati...",
+          "output": "the attention model, MDREA, also outperforms the best existing research results (WAP 0.690 to 0.688)",
+          "metadata_task_name": "qasper",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "qasper_2",
+          "metadata_original_token_count": 4341,
+          "metadata_compression_budget_2x": 2170,
+          "metadata_compression_budget_4x": 1085,
+          "metadata_compression_budget_8x": 542,
+          "metadata_split": "mini",
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_multifieldqa_en",
+      "examples": [
+        {
+          "input": "Read the following text and answer briefly.\n\nFootball Club Urartu (, translated Futbolayin Akumb Urartu), commonly known as Urartu, is an Armenian professional football team based in the capital Yerev...",
+          "output": "South West Ultras fan club.",
+          "metadata_task_name": "multifieldqa_en",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "multifieldqa_en_0",
+          "metadata_original_token_count": 1514,
+          "metadata_compression_budget_2x": 757,
+          "metadata_compression_budget_4x": 378,
+          "metadata_compression_budget_8x": 189,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "Read the following text and answer briefly.\n\nCurrent address: Division of Brain Sciences, Department of Medicine, Imperial College London, London, United Kingdom.\nIn a variety of species, reduced food...",
+          "output": "No, it is not necessary.",
+          "metadata_task_name": "multifieldqa_en",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "multifieldqa_en_1",
+          "metadata_original_token_count": 11037,
+          "metadata_compression_budget_2x": 5518,
+          "metadata_compression_budget_4x": 2759,
+          "metadata_compression_budget_8x": 1379,
+          "metadata_split": "mini",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "Read the following text and answer briefly.\n\n\\section{Introduction}\n\nDespite the rise of graphene and other 2D materials, semiconducting single-walled carbon nanotubes (SWNT) are still regarded as str...",
+          "output": "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS).",
+          "metadata_task_name": "multifieldqa_en",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "multifieldqa_en_2",
+          "metadata_original_token_count": 8132,
+          "metadata_compression_budget_2x": 4066,
+          "metadata_compression_budget_4x": 2033,
+          "metadata_compression_budget_8x": 1016,
+          "metadata_split": "holdout",
+          "metadata_row_index": 2
+        }
+      ]
+    }
+  ]
+}
