@@ -1,0 +1,2614 @@
+{
+  "metadata": {
+    "method_name": "prompt_compression_comparison",
+    "description": "Target-model attention vs proxy prompt compression on LongBench",
+    "num_methods": 8,
+    "compression_rates": [
+      2.0,
+      4.0,
+      8.0
+    ],
+    "num_examples": 216,
+    "model": "gpt2",
+    "device": "cpu"
+  },
+  "datasets": [
+    {
+      "dataset": "LongBench_mini",
+      "examples": [
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qasper",
+          "output": "Answer for qasper",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: hotpotqa",
+          "output": "Answer for hotpotqa",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: 2wikimqa",
+          "output": "Answer for 2wikimqa",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: musique",
+          "output": "Answer for musique",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: gov_report",
+          "output": "Answer for gov_report",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: qmsum",
+          "output": "Answer for qmsum",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: multi_news",
+          "output": "Answer for multi_news",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua2_2.0x": "Prediction by llmlingua2 at 2.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_rollout_2.0x": "Prediction by attention_rollout at 2.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_calibration_distilled_2.0x": "Prediction by calibration_distilled at 2.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_hybrid_2.0x": "Prediction by hybrid at 2.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_sink_2.0x": "Prediction by attention_sink at 2.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_baseline_4.0x": "Prediction by baseline at 4.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua_4.0x": "Prediction by llmlingua at 4.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_longllmlingua_4.0x": "Prediction by longllmlingua at 4.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua2_4.0x": "Prediction by llmlingua2 at 4.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_rollout_4.0x": "Prediction by attention_rollout at 4.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_calibration_distilled_4.0x": "Prediction by calibration_distilled at 4.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_hybrid_4.0x": "Prediction by hybrid at 4.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_sink_4.0x": "Prediction by attention_sink at 4.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 4.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_baseline_8.0x": "Prediction by baseline at 8.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua_8.0x": "Prediction by llmlingua at 8.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_longllmlingua_8.0x": "Prediction by longllmlingua at 8.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_llmlingua2_8.0x": "Prediction by llmlingua2 at 8.0x compression",
+          "metadata_method": "llmlingua2",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_rollout_8.0x": "Prediction by attention_rollout at 8.0x compression",
+          "metadata_method": "attention_rollout",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_calibration_distilled_8.0x": "Prediction by calibration_distilled at 8.0x compression",
+          "metadata_method": "calibration_distilled",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_hybrid_8.0x": "Prediction by hybrid at 8.0x compression",
+          "metadata_method": "hybrid",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: vcsum",
+          "output": "Answer for vcsum",
+          "predict_attention_sink_8.0x": "Prediction by attention_sink at 8.0x compression",
+          "metadata_method": "attention_sink",
+          "metadata_ratio": 8.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

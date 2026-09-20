@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "method_name": "prompt_compression_comparison",
+    "description": "Target-model attention vs proxy prompt compression on LongBench",
+    "num_methods": 8,
+    "compression_rates": [
+      2.0,
+      4.0,
+      8.0
+    ],
+    "num_examples": 45,
+    "model": "gpt2",
+    "device": "cpu"
+  },
+  "datasets": [
+    {
+      "dataset": "LongBench_mini",
+      "examples": [
+        {
+          "input": "Answer the following question.\n\nContext: What is the capital of France?\n\nAnswer: Paris",
+          "output": "Paris",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.0,
+            "rouge_l": 0.0,
+            "em": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

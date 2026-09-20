@@ -1,0 +1,6 @@
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python=3.12 && uv pip install torch transformers llmlingua captum datasets scikit-learn evaluate loguru psutil"
+  - path: results/
+    keep: Experiment output JSON files with 216 examples and predict_* fields

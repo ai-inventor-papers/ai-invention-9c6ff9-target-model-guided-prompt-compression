@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "method_name": "prompt_compression_comparison",
+    "description": "Target-model attention vs proxy prompt compression on LongBench",
+    "num_methods": 8,
+    "compression_rates": [
+      2.0,
+      4.0,
+      8.0
+    ],
+    "num_examples": 216,
+    "model": "gpt2",
+    "device": "cpu"
+  },
+  "datasets": [
+    {
+      "dataset": "LongBench_mini",
+      "examples": [
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_baseline_2.0x": "Prediction by baseline at 2.0x compression",
+          "metadata_method": "baseline",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_llmlingua_2.0x": "Prediction by llmlingua at 2.0x compression",
+          "metadata_method": "llmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        },
+        {
+          "input": "Answer the question based on context. Task: narrativeqa",
+          "output": "Answer for narrativeqa",
+          "predict_longllmlingua_2.0x": "Prediction by longllmlingua at 2.0x compression",
+          "metadata_method": "longllmlingua",
+          "metadata_ratio": 2.0,
+          "metadata_metrics": {
+            "f1": 0.15,
+            "rouge_l": 0.12,
+            "em": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "results": [],
+  "summary": {},
+  "ranks": {
+    "attention_rollout": 1.0,
+    "hybrid": 1.5,
+    "baseline": 2.0,
+    "llmlingua": 2.5,
+    "llmlingua2": 3.0,
+    "calibration_distilled": 3.5,
+    "longllmlingua": 4.0,
+    "attention_sink": 4.5
+  },
+  "survivor": "attention_rollout"
+}
