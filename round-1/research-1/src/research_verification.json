@@ -1,0 +1,130 @@
+{
+  "valid": true,
+  "file_errors": [],
+  "schema_errors": [],
+  "content_warnings": [
+    "research_out.json: Sources with uncited indices: [3, 5, 6, 7, 8, 12, 13]",
+    "structured_output: Sources with uncited indices: [3, 5, 6, 7, 8, 12, 13]",
+    "Source [1] passage 'LLMLingua-2 trains a BERT-based classifier to predict token importance, achieving faster inference t': unverified (source or quote checker unavailable).",
+    "Source [2] passage 'LongLLMLingua leverages question-aware perplexity to preserve query-relevant tokens during compressi': unverified (source or quote checker unavailable).",
+    "Source [5] passage 'Set output_attentions=True to return attention matrices from the model forward pass.': unverified (source or quote checker unavailable).",
+    "Source [6] passage 'Attention rollout recursively multiplies attention matrices across layers to approximate token-to-to': unverified (source or quote checker unavailable).",
+    "Source [7] passage 'Integrated gradients defines feature importance as the path integral of gradients along a straight-l': unverified (source or quote checker unavailable).",
+    "Source [8] passage 'LayerIntegratedGradients computes integrated gradients for specified layers.': unverified (source or quote checker unavailable).",
+    "Source [9] passage 'Attention sinks arise because the initial tokens accumulate disproportionate attention, enabling eff': unverified (source or quote checker unavailable).",
+    "Source [10] passage 'LongBench comprises diverse tasks including single-document QA, multi-document QA, summarization, an': unverified (source or quote checker unavailable).",
+    "Source [12] passage 'Prompt compression can be framed as subset selection among candidate units under budget constraints.': unverified (source or quote checker unavailable).",
+    "Source [13] passage 'LLMLingua compresses prompts by iterative token dropping guided by perplexity scores estimated by a ': unverified (source or quote checker unavailable).",
+    "Source [14] passage 'LongLLMLingua leverages question-aware perplexity to preserve query-relevant tokens during compressi': unverified (source or quote checker unavailable).",
+    "Source [15] passage 'Gisting enables efficient prompt compression by distilling lengthy inputs into compact gist represen': unverified (source or quote checker unavailable)."
+  ],
+  "files_found": {
+    "research_out.json": {
+      "exists": true,
+      "path": "/home/adrian/projects/ai-inventor-wt-integ/aii_data/users/admin/runs/run_8az8NIQ1qgmY/3_invention_loop/iter_1/gen_art/gen_art_research_1/research_out.json",
+      "source_count": 15,
+      "size": 14178
+    }
+  },
+  "source_count": 15,
+  "checked_at": "2026-09-20T13:30:28.396294+00:00",
+  "passage_check_scope": "Case/whitespace-normalized text occurrence at the source URL (or archive fallback). Not claim entailment, locator verification, or author/year verification. status=error means unverified, not a misquotation.",
+  "passages": [
+    {
+      "source_index": 1,
+      "source_url": "https://arxiv.org/abs/2403.2403.12972",
+      "quote": "LLMLingua-2 trains a BERT-based classifier to predict token importance, achieving faster inference than iterative perplexity-based compression.",
+      "locator": "Abstract",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 2,
+      "source_url": "https://arxiv.org/abs/2310.06839",
+      "quote": "LongLLMLingua leverages question-aware perplexity to preserve query-relevant tokens during compression.",
+      "locator": "Introduction",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 5,
+      "source_url": "https://huggingface.co/docs/transformers/main/output_attentions",
+      "quote": "Set output_attentions=True to return attention matrices from the model forward pass.",
+      "locator": "Model outputs",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 6,
+      "source_url": "https://arxiv.org/abs/2005.00928",
+      "quote": "Attention rollout recursively multiplies attention matrices across layers to approximate token-to-token importance.",
+      "locator": "Section 3",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 7,
+      "source_url": "https://arxiv.org/abs/1703.01365",
+      "quote": "Integrated gradients defines feature importance as the path integral of gradients along a straight-line interpolation from a baseline to the input.",
+      "locator": "Section 3",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 8,
+      "source_url": "https://captum.ai/",
+      "quote": "LayerIntegratedGradients computes integrated gradients for specified layers.",
+      "locator": "API docs",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 9,
+      "source_url": "https://arxiv.org/abs/2309.17453",
+      "quote": "Attention sinks arise because the initial tokens accumulate disproportionate attention, enabling efficient streaming with fixed KV cache.",
+      "locator": "Abstract",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 10,
+      "source_url": "https://arxiv.org/abs/2405.20309",
+      "quote": "LongBench comprises diverse tasks including single-document QA, multi-document QA, summarization, and others.",
+      "locator": "Introduction",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 12,
+      "source_url": "https://arxiv.org/abs/2305.14242",
+      "quote": "Prompt compression can be framed as subset selection among candidate units under budget constraints.",
+      "locator": "Abstract",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 13,
+      "source_url": "https://arxiv.org/abs/2310.05778",
+      "quote": "LLMLingua compresses prompts by iterative token dropping guided by perplexity scores estimated by a small language model.",
+      "locator": "Abstract",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 14,
+      "source_url": "https://arxiv.org/abs/2310.06839",
+      "quote": "LongLLMLingua leverages question-aware perplexity to preserve query-relevant tokens during compression.",
+      "locator": "Introduction",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    },
+    {
+      "source_index": 15,
+      "source_url": "https://arxiv.org/abs/2402.05056",
+      "quote": "Gisting enables efficient prompt compression by distilling lengthy inputs into compact gist representations.",
+      "locator": "Abstract (unverified)",
+      "status": "error",
+      "error_message": "Quote checker returned no matching result"
+    }
+  ]
+}
