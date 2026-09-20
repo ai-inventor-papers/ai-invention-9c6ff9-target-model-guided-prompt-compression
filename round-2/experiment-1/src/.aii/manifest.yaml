@@ -1,0 +1,7 @@
+entries:
+  - path: __pycache__/
+    delete: regenerable
+    source: "python -m py_compile method.py"
+  - path: .venv/
+    delete: regenerable
+    source: "uv pip install -r pyproject.toml"

@@ -1,0 +1,3 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 7188.93it/s]
+Input shape: torch.Size([1, 21])
+Has attentions: True

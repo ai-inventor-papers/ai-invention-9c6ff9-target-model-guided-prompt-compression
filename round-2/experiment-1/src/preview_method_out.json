@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "model": "gpt2",
+    "device": "cpu",
+    "num_examples": 2,
+    "num_methods": 1,
+    "ratios": [
+      2.0
+    ],
+    "categories": [
+      "single_doc_qa",
+      "multi_doc_qa",
+      "summarization"
+    ],
+    "aggregated_metrics": {
+      "baseline_2.0x_single_doc_qa_mean_f1": 0.1669172932330827,
+      "baseline_2.0x_single_doc_qa_mean_rouge_l": 0.10977443609022555,
+      "baseline_2.0x_single_doc_qa_mean_combined": 0.1383458646616541,
+      "baseline_2.0x_single_doc_qa_std_f1": 0.087192114371875,
+      "baseline_2.0x_single_doc_qa_std_rouge_l": 0.006379910807698165,
+      "baseline_2.0x_single_doc_qa_std_combined": 0.04678601258978659,
+      "baseline_2.0x_single_doc_qa_ci_lower": 0.10526315789473684,
+      "baseline_2.0x_single_doc_qa_ci_upper": 0.1714285714285714,
+      "rank_baseline_avg": 1.0,
+      "survivor": 1.0
+    },
+    "bootstrap_cis": {
+      "baseline_2.0x_single_doc_qa": {
+        "lower": 0.10526315789473684,
+        "upper": 0.1714285714285714
+      }
+    },
+    "significance_tests": {},
+    "rank_table": {
+      "per_method_ranks": {
+        "baseline": [
+          1
+        ]
+      },
+      "average_ranks": {
+        "baseline": 1.0
+      },
+      "survivor": "baseline"
+    },
+    "survivor": "baseline"
+  },
+  "datasets": [
+    {
+      "dataset": "longbench_narrativeqa",
+      "examples": [
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "The Atlas Mountains",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_2",
+          "metadata_original_token_count": 8040,
+          "metadata_compression_budget_2x": 4020,
+          "metadata_compression_budget_4x": 2010,
+          "metadata_compression_budget_8x": 1005,
+          "metadata_split": "mini",
+          "metadata_row_index": 2,
+          "predict_baseline_2_0x": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "metadata_compressed_baseline_2_0x": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "metadata_metric_baseline_2_0x_f1": 0.10526315789473684,
+          "metadata_metric_baseline_2_0x_rouge_l": 0.10526315789473684,
+          "metadata_metric_baseline_2_0x_combined": 0.10526315789473684
+        },
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "To smuggle Socrates out of prison and into a life of exile.",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_3",
+          "metadata_original_token_count": 9038,
+          "metadata_compression_budget_2x": 4519,
+          "metadata_compression_budget_4x": 2259,
+          "metadata_compression_budget_8x": 1129,
+          "metadata_split": "mini",
+          "metadata_row_index": 3,
+          "predict_baseline_2_0x": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "metadata_compressed_baseline_2_0x": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "metadata_metric_baseline_2_0x_f1": 0.22857142857142854,
+          "metadata_metric_baseline_2_0x_rouge_l": 0.11428571428571427,
+          "metadata_metric_baseline_2_0x_combined": 0.1714285714285714
+        }
+      ]
+    }
+  ]
+}
