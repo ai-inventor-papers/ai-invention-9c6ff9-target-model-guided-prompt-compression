@@ -9,30 +9,31 @@ This experiment implements and evaluates 8 prompt compression methods (+ baselin
 3. **LongLLMLingua** - Query-aware contrastive perplexity
 4. **LLMLingua-2** - BERT-based token classification
 5. **Attention Rollout** - Attention flow aggregation across layers
-6. **Calibration Distilled** - Cached target-model attention priors guiding proxy-based dropping
+6. **Calibration Distilled** - Cached target-model attention priors guiding proxy-based dropping (CADC variant)
 7. **Hybrid** - Two-stage: LLMLingua-2 first, then Attention Rollout refinement
 8. **Attention Sink** - Preserves initial k tokens as "sinks" plus base method
 
 ## Statistical Analysis
 
-- Bootstrap 95% confidence intervals (100 resamples)
+- Bootstrap 95% confidence intervals (1000 resamples)
 - Paired bootstrap significance tests (Attention Rollout vs baselines)
 - Rank-based selection protocol (average rank across category×ratio cells)
 
 ## Files
 
-- `method.py` - Main experiment script
+- `method.py` - Main experiment script (full implementation)
 - `method_out.json` - Full experiment output (exp_gen_sol_out schema)
 - `full_method_out.json` - Identical to method_out.json
 - `mini_method_out.json` - First 2 examples only
 - `preview_method_out.json` - First 2 examples with strings truncated to 200 chars
 - `pyproject.toml` - Pinned dependencies for reproducibility
+- `logs/run.log` - Execution logs
 
 ## Running
 
 ```bash
 cd /home/adrian/projects/ai-inventor-wt-integ/aii_data/users/admin/runs/run_8az8NIQ1qgmY/3_invention_loop/iter_2/gen_art/gen_art_experiment_1
-uv run method.py
+.venv/bin/python method.py
 ```
 
 ## Restoring Removed Files

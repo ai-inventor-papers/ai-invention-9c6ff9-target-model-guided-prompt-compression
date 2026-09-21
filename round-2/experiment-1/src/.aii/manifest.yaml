@@ -1,4 +1,20 @@
 entries:
+  - path: method_out.json
+    keep: main experiment output with full results and statistical analysis
+  - path: full_method_out.json
+    keep: duplicate of method_out.json for compatibility
+  - path: mini_method_out.json
+    keep: mini version with first 2 examples
+  - path: preview_method_out.json
+    keep: preview version with truncated strings
+  - path: method.py
+    keep: main experiment implementation
+  - path: pyproject.toml
+    keep: pinned dependencies for reproducibility
+  - path: README.md
+    keep: documentation and run instructions
+  - path: logs/run.log
+    keep: execution logs
   - path: __pycache__/
     delete: regenerable
     source: "python -m py_compile method.py"
