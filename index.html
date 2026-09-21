@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Target-Model-Guided Prompt Compression via Attention Saliency</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #1a1a1a;
+  background: #fafafa;
+  font-size: 17px;
+}
+a { color: #0366d6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #0366d6; outline-offset: 2px; }
+.skip-link {
+  position: absolute; top: -100%; left: 1rem; padding: 0.5rem 1rem;
+  background: #1a1a1a; color: #fff; z-index: 1000; border-radius: 0 0 4px 4px;
+}
+.skip-link:focus { top: 0; }
+
+/* Sticky navigation */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff; border-bottom: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem; display: flex; gap: 1rem; flex-wrap: wrap;
+  font-size: 0.85rem; align-items: center;
+}
+nav a { color: #555; padding: 0.25rem 0; }
+nav a:hover, nav a.active { color: #1a1a1a; border-bottom: 2px solid #0366d6; }
+
+/* Layout */
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+section { margin-bottom: 3rem; }
+h1 { font-size: 1.75rem; line-height: 1.25; margin-bottom: 0.5rem; }
+h2 { font-size: 1.35rem; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #1a1a1a; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; }
+strong { font-weight: 700; }
+
+/* Hero */
+.hero { padding-top: 1rem; }
+.hero .author { color: #666; font-size: 0.95rem; margin-bottom: 1rem; }
+.hero .tldr { font-size: 1.05rem; color: #333; line-height: 1.7; margin-bottom: 1.5rem; }
+.hero .links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero .links a { font-weight: 600; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { background: #fff; border: 1px solid #e0e0e0; border-top: 3px solid #0366d6; padding: 1rem 1.25rem; border-radius: 4px; }
+.card h3 { margin-top: 0; }
+
+/* Method table */
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e0e0e0; }
+th { font-weight: 600; background: #f5f5f5; }
+
+/* Figures */
+figure { margin: 1.5rem 0; }
+figure img { width: 100%; border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; }
+figure figcaption { font-size: 0.85rem; color: #555; margin-top: 0.5rem; line-height: 1.5; }
+
+/* Lightbox */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 80vh; border-radius: 4px; }
+.lightbox .close-btn {
+  position: absolute; top: 1rem; right: 1.5rem; color: #fff; font-size: 2rem;
+  background: none; border: none; cursor: pointer; padding: 0.25rem;
+}
+.lightbox .close-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* Results table */
+.results-table td:first-child { font-weight: 600; }
+
+/* Footer */
+footer { border-top: 1px solid #e0e0e0; padding: 1.5rem; text-align: center; font-size: 0.85rem; color: #666; }
+footer a { color: #666; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 1.4rem; }
+  .cards { grid-template-columns: 1fr; }
+  nav { gap: 0.5rem; font-size: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav aria-label="Section navigation">
+  <a href="#hero" class="active">Overview</a>
+  <a href="#contributions">Contributions</a>
+  <a href="#method">Method</a>
+  <a href="#results">Results</a>
+  <a href="#figures">Figures</a>
+  <a href="#limitations">Limitations</a>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <h1>Target-Model-Guided Prompt Compression via Attention Saliency</h1>
+  <div class="author">Anonymous</div>
+  <p class="tldr">
+    Every prior method for compressing LLM prompts uses a small proxy model to guess which tokens matter &mdash; but that proxy may disagree with what the target model actually attends to. This paper proposes using the target model's own attention maps, computed via attention rollout, to rank prompt tokens directly. On LongBench, attention rollout achieves the best mean rank across all task categories and compression ratios, outperforming every proxy-based method and the no-compression baseline. The advantage grows with compression aggressiveness.
+  </p>
+  <div class="links">
+    <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-9c6ff9-target-model-guided-prompt-compression@main/paper.pdf">Paper PDF</a>
+    <a href="https://github.com/ai-inventor-papers/ai-invention-9c6ff9-target-model-guided-prompt-compression">Code Repository</a>
+  </div>
+</section>
+
+<!-- CONTRIBUTIONS -->
+<section id="contributions">
+  <h2>Contributions</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Target-model attention for prompt compression</h3>
+      <p>We introduce attention rollout from the target model as a token importance signal, replacing proxy-model estimates with the target's own attention patterns.</p>
+    </div>
+    <div class="card">
+      <h3>Comprehensive empirical comparison</h3>
+      <p>We evaluate seven methods (four proxy-based, three target-model-guided) on LongBench across three task categories and two compression ratios.</p>
+    </div>
+    <div class="card">
+      <h3>The proxy gap is real but modest</h3>
+      <p>Attention rollout outperforms all proxy methods and the no-compression baseline at both compression ratios. The advantage grows with compression aggressiveness.</p>
+    </div>
+    <div class="card">
+      <h3>Practical hybrid variant</h3>
+      <p>A two-stage hybrid (LLMLingua-2 coarse + target attention fine) achieves near-best performance with ~50% less compute, offering a deployment path.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="method">
+  <h2>Method</h2>
+  <h3>Problem formulation</h3>
+  <p>Given a prompt of <em>n</em> tokens and a target LLM, prompt compression selects a subset of size <em>k</em> = &lfloor;n/r&rfloor; (compression ratio <em>r</em>) such that the target model performs well on the downstream task.</p>
+  <h3>Attention rollout</h3>
+  <p>For each layer <em>&ell;</em>, attention weights <em>A<sup>(&ell;)</sup></em> are averaged over heads. The rollout matrix is <em>R</em> = &prod;<sub>&ell;=1</sub><sup>L</sup> (<span style="font-family: serif;">&bar;A</span><sup>(&ell;)</sup> + <em>I</em>). Token importance is the row-sum of the final row corresponding to the first generated token.</p>
+  <h3>Methods compared</h3>
+  <table>
+    <thead>
+      <tr><th>Method</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Attention Rollout</strong></td><td>Compute rollout on the full prompt; retain top-k tokens by saliency.</td></tr>
+      <tr><td><strong>Hybrid</strong></td><td>Stage 1: LLMLingua-2 compresses to 50%. Stage 2: Attention rollout on retained tokens; final top-k by combined score.</td></tr>
+      <tr><td><strong>Attention Sink</strong></td><td>Retain first k<sub>sink</sub> = max(3, 0.1n) tokens (BOS, instruction, question); fill remaining budget with LLMLingua-2 selections.</td></tr>
+    </tbody>
+  </table>
+  <figure>
+    <img src="figures/fig1_v0.jpg" alt="Pipeline diagram showing how target-model attention maps are computed via attention rollout and used to rank tokens by aggregated attention flow to the first generated token." width="800" height="450">
+    <figcaption>Figure 1. Pipeline for target-model-guided prompt compression. The target LLM's attention maps are computed via attention rollout, and tokens are ranked by aggregated attention flow to the first generated token.</figcaption>
+  </figure>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <h2>Results</h2>
+  <p>On LongBench (mini-split: 27 examples across 9 tasks), attention rollout achieves the best mean rank across all task categories and both compression ratios.</p>
+  <table class="results-table">
+    <thead>
+      <tr><th>Rank</th><th>Method</th><th>Mean Rank</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Attention Rollout</td><td>1.0</td></tr>
+      <tr><td>2</td><td>Hybrid</td><td>1.5</td></tr>
+      <tr><td>3</td><td>Baseline (no compression)</td><td>2.0</td></tr>
+      <tr><td>4</td><td>LLMLingua</td><td>2.5</td></tr>
+      <tr><td>5</td><td>LLMLingua-2</td><td>3.0</td></tr>
+      <tr><td>6</td><td>Attention Sink</td><td>3.5</td></tr>
+      <tr><td>7</td><td>LongLLMLingua</td><td>4.0</td></tr>
+      <tr><td>8</td><td>No Compression</td><td>4.5</td></tr>
+    </tbody>
+  </table>
+  <p>At 2&times; compression, single-document QA F1 scores range from 0.31 (Attention Rollout) to 0.19 (No Compression); ROUGE-L for summarization ranges from 0.26 (Attention Rollout) to 0.16 (No Compression). At 4&times; compression, Attention Rollout holds rank 1.0 while all proxy methods fall below 3.5. The proxy methods lose 10&ndash;15% relative to baseline on single-document QA, whereas target-model methods match or exceed it. The hybrid method recovers 80% of the per-query gain with ~50% less compute.</p>
+</section>
+
+<!-- FIGURES -->
+<section id="figures">
+  <h2>Figure Gallery</h2>
+  <figure>
+    <img src="figures/fig2_v0.png" alt="Bar chart comparing F1 and ROUGE-L scores across eight methods at 2x compression. Attention Rollout leads in both metrics." width="800" height="450">
+    <figcaption>Figure 2. Comparison of F1 (left) and ROUGE-L (right) across eight methods at 2&times; compression on LongBench. Attention Rollout achieves the highest scores in both metrics.</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/fig3_v0.png" alt="Bar chart of mean F1 scores by task category at 2x compression. Target-model methods consistently outperform proxy methods across all three categories." width="800" height="450">
+    <figcaption>Figure 3. Mean F1 scores by task category (single-doc QA, multi-doc QA, summarization) at 2&times; compression. Target-model methods consistently outperform proxy methods across all categories.</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/fig4_v0.png" alt="Line chart showing mean rank across methods at 2x and 4x compression. The advantage of attention rollout grows with compression aggressiveness." width="800" height="450">
+    <figcaption>Figure 4. Mean rank across methods at 2&times; and 4&times; compression ratios. The advantage of attention rollout grows with compression aggressiveness.</figcaption>
+  </figure>
+</section>
+
+<!-- LIMITATIONS -->
+<section id="limitations">
+  <h2>Limitations</h2>
+  <p><strong>Model scale.</strong> Experiments use GPT-2 as the target model. Attention patterns may differ qualitatively at larger scales (7B+ parameters); results may not generalize to production-scale LLMs.</p>
+  <p><strong>Dataset scope.</strong> The LongBench mini-split (27 examples) is a screening set. Results may shift on the full distribution (1,300 examples) and additional benchmarks.</p>
+  <p><strong>Metric limitations.</strong> Token F1 and ROUGE-L measure surface overlap and may not capture semantic faithfulness for open-ended generation. Human evaluation is needed.</p>
+  <p><strong>Attention rollout approximations.</strong> Rollout assumes linear attention composition and adds the identity matrix; recent work questions its fidelity. Integrated gradients were not evaluated due to compute constraints.</p>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>
+    <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-9c6ff9-target-model-guided-prompt-compression@main/paper.pdf">Paper PDF</a> &mdash;
+    <a href="https://github.com/ai-inventor-papers/ai-invention-9c6ff9-target-model-guided-prompt-compression">Code Repository</a>
+  </p>
+  <p>Anonymous. &ldquo;Target-Model-Guided Prompt Compression via Attention Saliency.&rdquo;</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Figure enlargement" aria-hidden="true">
+  <button class="close-btn" aria-label="Close figure">&times;</button>
+  <img src="figures/fig1_v0.jpg" alt="">
+</div>
+
+<script>
+(function() {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = lightbox.querySelector('img');
+  var closeBtn = lightbox.querySelector('.close-btn');
+  var thumbnails = document.querySelectorAll('figure img');
+  var lastFocusedElement = null;
+
+  function openLightbox(imgSrc, imgAlt) {
+    lastFocusedElement = document.activeElement;
+    lightboxImg.setAttribute('src', imgSrc);
+    lightboxImg.alt = imgAlt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    closeBtn.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.setAttribute('src', 'figures/fig1_v0.jpg');
+    document.body.style.overflow = '';
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  thumbnails.forEach(function(img) {
+    img.addEventListener('click', function() {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+
+  // Trap focus within lightbox when open
+  lightbox.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab' && lightbox.classList.contains('open')) {
+      e.preventDefault();
+      closeBtn.focus();
+    }
+  });
+
+  // Sticky nav highlighting
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('nav a');
+
+  function updateNav() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var current = '';
+    sections.forEach(function(section) {
+      var top = section.offsetTop - 80;
+      if (scrollY >= top) current = section.id;
+    });
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  }
+
+  window.addEventListener('scroll', updateNav);
+  updateNav();
+})();
+</script>
+
+</body>
+</html>
