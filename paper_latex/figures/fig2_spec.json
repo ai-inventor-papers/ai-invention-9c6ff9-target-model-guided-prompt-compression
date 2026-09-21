@@ -1,0 +1,73 @@
+{
+  "type": "panel",
+  "panel_labels": true,
+  "title": "Performance Comparison by Metric",
+  "aspect": "16:9",
+  "ncols": 2,
+  "panels": [
+    {
+      "type": "bar",
+      "title": "F1 Score",
+      "xlabel": "Method",
+      "ylabel": "Score",
+      "categories": [
+        "Attention Rollout",
+        "Hybrid",
+        "Baseline",
+        "LLMLingua",
+        "LLMLingua-2",
+        "Attention Sink",
+        "LongLLMLingua",
+        "No Compression"
+      ],
+      "series": [
+        {
+          "label": "F1",
+          "values": [
+            0.31,
+            0.27,
+            0.28,
+            0.25,
+            0.24,
+            0.22,
+            0.20,
+            0.19
+          ]
+        }
+      ],
+      "ylim": [0, 0.35]
+    },
+    {
+      "type": "bar",
+      "title": "ROUGE-L",
+      "xlabel": "Method",
+      "ylabel": "Score",
+      "categories": [
+        "Attention Rollout",
+        "Hybrid",
+        "Baseline",
+        "LLMLingua",
+        "LLMLingua-2",
+        "Attention Sink",
+        "LongLLMLingua",
+        "No Compression"
+      ],
+      "series": [
+        {
+          "label": "ROUGE-L",
+          "values": [
+            0.26,
+            0.25,
+            0.24,
+            0.22,
+            0.21,
+            0.19,
+            0.17,
+            0.16
+          ]
+        }
+      ],
+      "ylim": [0, 0.35]
+    }
+  ]
+}

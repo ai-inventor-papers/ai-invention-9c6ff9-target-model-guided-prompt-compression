@@ -1,0 +1,27 @@
+{
+  "type": "bar",
+  "title": "Performance by Task Category",
+  "xlabel": "Task Category",
+  "ylabel": "F1/ROUGE-L Score",
+  "aspect": "16:9",
+  "ylim": [0, 0.35],
+  "categories": ["Single-doc QA", "Multi-doc QA", "Summarization"],
+  "series": [
+    {
+      "label": "Attention Rollout",
+      "values": [0.31, 0.29, 0.26]
+    },
+    {
+      "label": "Hybrid",
+      "values": [0.27, 0.26, 0.25]
+    },
+    {
+      "label": "Baseline",
+      "values": [0.28, 0.25, 0.24]
+    },
+    {
+      "label": "LLMLingua",
+      "values": [0.25, 0.19, 0.22]
+    }
+  ]
+}

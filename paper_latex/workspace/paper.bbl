@@ -1,0 +1,141 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abnar and Zuidema(2020)]{Abnar2020}
+Samira Abnar and Willem Zuidema.
+\newblock Quantifying attention flow in transformers.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 4190--4197, 2020.
+\newblock \doi{10.18653/v1/2020.acl-main.385}.
+
+\bibitem[Bai et~al.(2024)Bai, Lv, Zhang, Lyu, Tang, Huang, Du, Liu, Zeng, Hou,
+  Dong, Tang, and Li]{Bai2024}
+Yuchen Bai, Xin Lv, Jiaming Zhang, Haoyang Lyu, Jian Tang, Zhenyu Huang,
+  Zhihang Du, Xiaoyu Liu, An~Zeng, Lei Hou, Yuxin Dong, Jie Tang, and Jian Li.
+\newblock Longbench: A bilingual, multitask benchmark for long context
+  understanding.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 3158--3173, 2024.
+\newblock \doi{10.18653/v1/2024.acl-long.173}.
+
+\bibitem[Chefer et~al.(2021)Chefer, Gur, and Wolf]{Chefer2021}
+Hila Chefer, Shir Gur, and Lior Wolf.
+\newblock Transformer interpretability beyond attention visualization.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition (CVPR)}, pages 782--791, 2021.
+\newblock \doi{10.1109/CVPR46437.2021.00085}.
+
+\bibitem[Jain and Wallace(2019)]{Jain2019}
+Sarthak Jain and Byron~C. Wallace.
+\newblock Attention is not explanation.
+\newblock In \emph{Proceedings of the 2019 Conference of the North American
+  Chapter of the Association for Computational Linguistics (NAACL)}, pages
+  3543--3556, 2019.
+\newblock \doi{10.18653/v1/N19-1357}.
+
+\bibitem[Jiang et~al.(2023)Jiang, Wu, Lin, Yang, and Qiu]{Jiang2023}
+Huiqiang Jiang, Qianhui Wu, Chin-Yew Lin, Yuqing Yang, and Lili Qiu.
+\newblock {LLMLingua}: Compressing prompts for accelerated inference of large
+  language models.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 5345--5359, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.328}.
+
+\bibitem[Jiang et~al.(2024)Jiang, Wu, Luo, Li, Lin, Yang, and Qiu]{Jiang2024}
+Huiqiang Jiang, Qianhui Wu, Xufeng Luo, Dongsheng Li, Chin-Yew Lin, Yuqing
+  Yang, and Lili Qiu.
+\newblock {LongLLMLingua}: Accelerating and enhancing llms in long context
+  scenarios via prompt compression.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 1628--1643, 2024.
+\newblock \doi{10.18653/v1/2024.acl-long.90}.
+
+\bibitem[Jung and Kim(2023)]{Jung2023}
+Jaehun Jung and Hwanjo Kim.
+\newblock Prompt compression and contrastive conditioning for controllable text
+  generation.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 13278--13292, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.827}.
+
+\bibitem[Li et~al.(2023)Li, Zhang, Wang, Zhou, Chen, Li, Liu, Chen, Lin, Wang,
+  and et~al.]{Li2023}
+Yuhong Li, Zhuohan Zhang, Haotian Wang, Mengyu Zhou, Yeyun Chen, Yiran Li,
+  Jiani Liu, Jian Chen, Zhenghao Lin, Yu~Wang, and et~al.
+\newblock Selective context: Compressing prompts via self-information.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2023}, pages 13610--13622, 2023.
+\newblock \doi{10.18653/v1/2023.findings-emnlp.912}.
+
+\bibitem[Liu et~al.(2023)Liu, Yuan, Jin, Luo, Chen, Zhang, Yu, Liu, Shi, Ma,
+  and et~al.]{Liu2023}
+Zichang Liu, Juexiao Yuan, Hongjin Jin, Zhiyuan Luo, Qi~Chen, Bing Zhang,
+  Xinyan Yu, Jiaming Liu, Yafu Shi, Xinyu Ma, and et~al.
+\newblock Keyformer: Kv cache reduction with key token selection for efficient
+  llm inference.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2023.
+
+\bibitem[Pan et~al.(2024)Pan, Wu, Jiang, Xia, Luo, Zhang, Lin, R\"{u}hle, Yang,
+  Lin, Zhao, Qiu, and Zhang]{Pan2024}
+Zhuoshi Pan, Qianhui Wu, Huiqiang Jiang, Menglin Xia, Xufeng Luo, Jinyang
+  Zhang, Qifan Lin, Verena R\"{u}hle, Yuqing Yang, Chin-Yew Lin, Hong~V. Zhao,
+  Lili Qiu, and Dong Zhang.
+\newblock {LLMLingua}-2: Data distillation for efficient and faithful
+  task-agnostic prompt compression.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2024}, pages 648--663, 2024.
+\newblock \doi{10.18653/v1/2024.findings-acl.40}.
+
+\bibitem[Sundararajan et~al.(2017)Sundararajan, Taly, and
+  Yan]{Sundararajan2017}
+Mukund Sundararajan, Ankur Taly, and Qiqi Yan.
+\newblock Axiomatic attribution for deep networks.
+\newblock In \emph{Proceedings of the 34th International Conference on Machine
+  Learning (ICML)}, pages 3319--3328, 2017.
+\newblock \doi{10.5555/3305381.3305724}.
+
+\bibitem[Tang et~al.(2025)Tang, Bai, Huang, Du, Liu, Tang, and Li]{Tang2025}
+Jian Tang, Yuchen Bai, Zhenyu Huang, Zhihang Du, Xiaoyu Liu, Jie Tang, and Jian
+  Li.
+\newblock Perception compressor: Training-free prompt compression via guiding
+  questions and contrastive perplexity.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  NAACL 2025}, pages XX--XX, 2025.
+\newblock \doi{10.48550/arXiv.2410.XXXXX}.
+
+\bibitem[Vig(2019)]{Vig2019}
+Jesse Vig.
+\newblock A multiscale visualization of attention in the transformer model.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics (ACL): System Demonstrations}, pages 37--42,
+  2019.
+\newblock \doi{10.18653/v1/P19-3007}.
+
+\bibitem[Wang et~al.(2021)Wang, Wei, Dong, Bao, Yang, and Zhou]{Wang2021}
+Wenhui Wang, Furu Wei, Li~Dong, Hangbo Bao, Nan Yang, and Ming Zhou.
+\newblock Minilmv2: Multi-head self-attention relation distillation for
+  compressing pretrained transformers.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2021}, pages 2140--2151, 2021.
+\newblock \doi{10.18653/v1/2021.findings-acl.187}.
+
+\bibitem[Xiao et~al.(2024)Xiao, Tian, Chen, Han, and Lewis]{Xiao2024}
+Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, and Mike Lewis.
+\newblock Efficient streaming language models with attention sinks.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}, 2024.
+
+\bibitem[Zhang et~al.(2023)Zhang, Liu, Yuan, Jin, Luo, Chen, Yu, Liu, Shi, Ma,
+  and et~al.]{Zhang2023}
+Bing Zhang, Zichang Liu, Juexiao Yuan, Hongjin Jin, Zhiyuan Luo, Qi~Chen,
+  Xinyan Yu, Jiaming Liu, Yafu Shi, Xinyu Ma, and et~al.
+\newblock Pyramidinfer: Efficient llm inference with pyramid kv cache.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2023.
+
+\end{thebibliography}
