@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "longbench_narrativeqa",
+      "examples": [
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "The Atlas Mountains",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_2",
+          "metadata_original_token_count": 8040,
+          "metadata_split": "mini",
+          "metadata_row_index": 2
+        },
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nSt...",
+          "output": "To smuggle Socrates out of prison and into a life of exile.",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_3",
+          "metadata_original_token_count": 9038,
+          "metadata_split": "mini",
+          "metadata_row_index": 3
+        }
+      ]
+    }
+  ]
+}
