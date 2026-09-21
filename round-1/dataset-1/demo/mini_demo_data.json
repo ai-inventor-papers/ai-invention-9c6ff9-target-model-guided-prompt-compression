@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "source": "LongBench (Xnhyacinth/LongBench on HuggingFace)",
+    "tokenizer": "meta-llama/Meta-Llama-3-8B",
+    "description": "Long-context benchmark for prompt compression evaluation (demo subset)",
+    "compression_budgets": {
+      "2x": 0.5,
+      "4x": 0.25,
+      "8x": 0.125
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "longbench_narrativeqa",
+      "examples": [
+        {
+          "input": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nStory: Transcribed from the 1915 Martin Secker edition by David Price, email\nccx074@pglaf.org\n\n                          [Picture: Book cover]\n\n\n\n\n\n                                   THE\n                                COXON FUND\n\n\n                              BY HENRY JAMES\n\n                      [Picture: Decorative graphic]\n\n                                * * * * *\n\n                          LONDON: MARTIN SECKER\n                     NUMBER FIVE JOHN STREET ADELPHI\n\n                                * * * * *\n\n                    This edition first published 1915\n\n                       The text follows that of the\n                            Definitive Edition\n\n                                * * * * *\n\n\n\n\nI\n\n\n\u201cTHEY\u2019VE got him for life!\u201d I said to myself that evening on my way back\nto the station; but later on, alone in the compartment (from Wimbledon to\nWaterloo, before the glory of the District Railway) I amended this\ndeclaration in the light of the sense that my friends would probably\nafter all not enjoy a monopoly of Mr. Saltram.  I won\u2019t pretend to have\ntaken his vast measure on that first occasion, but I think I had achieved\na glimpse of what the privilege of his acquaintance might mean for many\npersons in the way of charges accepted.  He had been a great experience,\nand it was this perhaps that had put me into the frame of foreseeing how\nwe should all, sooner or later, have the honour of dealing with him as a\nwhole.  Whatever impression I then received of the amount of this total,\nI had a full enough vision of the patience of the Mulvilles.  He was to\nstay all the winter: Adelaide dropped it in a tone that drew the sting\nfrom the inevitable emphasis.  These excellent people might indeed have\nbeen content to give the circle of hospitality a diameter of six months;\nbut if they didn\u2019t say he was to stay all summer as well it was only\nbecause this was more than they ventured to hope.  I remember that at\ndinner that evening he wore slippers, new and predominantly purple, of\nsome queer carpet-stuff; but the Mulvilles were still in the stage of\nsupposing that he might be snatched from them by higher bidders.  At a\nlater time they grew, poor dears, to fear no snatching; but theirs was a\nfidelity which needed no help from competition to make them proud.\nWonderful indeed as, when all was said, you inevitably pronounced Frank\nSaltram, it was not to be overlooked that the Kent Mulvilles were in\ntheir way still more extraordinary: as striking an instance as could\neasily be encountered of the familiar truth that remarkable men find\nremarkable conveniences.\n\nThey had sent for me from Wimbledon to come out and dine, and there had\nbeen an implication in Adelaide\u2019s note\u2014judged by her notes alone she\nmight have been thought silly\u2014that it was a case in which something\nmomentous was to be determined or done.  I had never known them not be in\na \u201cstate\u201d about somebody, and I dare say I tried to be droll on this\npoint in accepting their invitation.  On finding myself in the presence\nof their latest discovery I had not at first felt irreverence droop\u2014and,\nthank heaven, I have never been absolutely deprived of that alternative\nin Mr. Saltram\u2019s company.  I saw, however\u2014I hasten to declare it\u2014that\ncompared to this specimen their other phoenixes had been birds of\ninconsiderable feather, and I afterwards took credit to myself for not\nhaving even in primal bewilderments made a mistake about the essence of\nthe man.  He had an incomparable gift; I never was blind to it\u2014it dazzles\nme still.  It dazzles me perhaps even more in remembrance than in fact,\nfor I\u2019m not unaware that for so rare a subject the imagination goes to\nsome expense, inserting a jewel here and there or giving a twist to a\nplume.  How the art of portraiture would rejoice in this figure if the\nart of portraiture had only the canvas!  Nature, in truth, had largely\nrounded it, and if memory, hovering about it, sometimes holds her breath,\nthis is because the voice that comes back was really golden.\n\nThough the great man was an inmate and didn\u2019t dress, he kept dinner on\nthis occasion waiting, and the first words he uttered on coming into the\nroom were an elated announcement to Mulville that he had found out\nsomething.  Not catching the allusion and gaping doubtless a little at\nhis face, I privately asked Adelaide what he had found out.  I shall\nnever forget the look she gave me as she replied: \u201cEverything!\u201d  She\nreally believed it.  At that moment, at any rate, he had found out that\nthe mercy of the Mulvilles was infinite.  He had previously of course\ndiscovered, as I had myself for that matter, that their dinners were\nsoign\u00e9s.  Let me not indeed, in saying this, neglect to declare that I\nshall falsify my counterfeit if I seem to hint that there was in his\nnature any ounce of calculation.  He took whatever came, but he never\nplotted for it, and no man who was so much of an absorbent can ever have\nbeen so little of a parasite.  He had a system of the universe, but he\nhad no system of sponging\u2014that was quite hand-to-mouth.  He had fine\ngross easy senses, but it was not his good-natured appetite that wrought\nconfusion.  If he had loved us for our dinners we could have paid with\nour dinners, and it would have been a great economy of finer matter.  I\nmake free in these connexions with the plural possessive because if I was\nnever able to do what the Mulvilles did, and people with still bigger\nhouses and simpler charities, I met, first and last, every demand of\nreflexion, of emotion\u2014particularly perhaps those of gratitude and of\nresentment.  No one, I think, paid the tribute of giving him up so often,\nand if it\u2019s rendering honour to borrow wisdom I\u2019ve a right to talk of my\nsacrifices.  He yielded lessons as the sea yields fish\u2014I lived for a\nwhile on this diet.  Sometimes it almost appeared to me that his massive\nmonstrous failure\u2014if failure after all it was\u2014had been designed for my\nprivate recreation.  He fairly pampered my curiosity; but the history of\nthat experience would take me too far.  This is not the large canvas I\njust now spoke of, and I wouldn\u2019t have approached him with my present\nhand had it been a question of all the features.  Frank Saltram\u2019s\nfeatures, for artistic purposes, are verily the anecdotes that are to be\ngathered.  Their name is legion, and this is only one, of which the\ninterest is that it concerns even more closely several other persons.\nSuch episodes, as one looks back, are the little dramas that made up the\ninnumerable facets of the big drama\u2014which is yet to be reported.\n\n\n\n\nII\n\n\nIT is furthermore remarkable that though the two stories are distinct\u2014my\nown, as it were, and this other\u2014they equally began, in a manner, the\nfirst night of my acquaintance with Frank Saltram, the night I came back\nfrom Wimbledon so agitated with a new sense of life that, in London, for\nthe very thrill of it, I could only walk home.  Walking and swinging my\nstick, I overtook, at Buckingham Gate, George Gravener, and George\nGravener\u2019s story may be said to have begun with my making him, as our\npaths lay together, come home with me for a talk.  I duly reme",
+          "output": "He is a guest in the home of the Mulvilles.",
+          "metadata_task_name": "narrativeqa",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "narrativeqa_0",
+          "metadata_original_token_count": 31361,
+          "metadata_compression_budget_2x": 15680,
+          "metadata_compression_budget_4x": 7840,
+          "metadata_compression_budget_8x": 3920,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_qasper",
+      "examples": [
+        {
+          "input": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, say so.\n\nArticle: ...\n\nQuestion: What is the main contribution of this paper?",
+          "output": "Ground truth is not established in the paper",
+          "metadata_task_name": "qasper",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "qasper_0",
+          "metadata_original_token_count": 3985,
+          "metadata_compression_budget_2x": 1992,
+          "metadata_compression_budget_4x": 996,
+          "metadata_compression_budget_8x": 498,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_multifieldqa_en",
+      "examples": [
+        {
+          "input": "Read the following text and answer briefly.\n\nFootball Club Urartu (, translated Futbolayin Akumb Urartu), commonly known as Urartu, is an Armenian professional football team based in the capital Yerev...",
+          "output": "South West Ultras fan club.",
+          "metadata_task_name": "multifieldqa_en",
+          "metadata_category": "single_doc_qa",
+          "metadata_task_id": "multifieldqa_en_0",
+          "metadata_original_token_count": 1514,
+          "metadata_compression_budget_2x": 757,
+          "metadata_compression_budget_4x": 378,
+          "metadata_compression_budget_8x": 189,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_hotpotqa",
+      "examples": [
+        {
+          "input": "Answer the question based on the given passages.\n\nPassage 1: ...\nPassage 2: ...\n\nQuestion: Who directed the film that won the Academy Award for Best Picture in 1994?",
+          "output": "Robert Zemeckis",
+          "metadata_task_name": "hotpotqa",
+          "metadata_category": "multi_doc_qa",
+          "metadata_task_id": "hotpotqa_0",
+          "metadata_original_token_count": 1234,
+          "metadata_compression_budget_2x": 617,
+          "metadata_compression_budget_4x": 308,
+          "metadata_compression_budget_8x": 154,
+          "metadata_split": "mini",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_2wikimqa",
+      "examples": [
+        {
+          "input": "Answer the question based on the given passages.\n\nPassage 1: ...\nPassage 2: ...\n\nQuestion: What is the birthplace of the person who founded the company?",
+          "output": "Seattle, Washington",
+          "metadata_task_name": "2wikimqa",
+          "metadata_category": "multi_doc_qa",
+          "metadata_task_id": "2wikimqa_0",
+          "metadata_original_token_count": 2345,
+          "metadata_compression_budget_2x": 1172,
+          "metadata_compression_budget_4x": 586,
+          "metadata_compression_budget_8x": 293,
+          "metadata_split": "mini",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_musique",
+      "examples": [
+        {
+          "input": "Answer the question based on the given passages.\n\nPassage 1: ...\nPassage 2: ...\n\nQuestion: What year was the organization founded?",
+          "output": "1998",
+          "metadata_task_name": "musique",
+          "metadata_category": "multi_doc_qa",
+          "metadata_task_id": "musique_0",
+          "metadata_original_token_count": 3456,
+          "metadata_compression_budget_2x": 1728,
+          "metadata_compression_budget_4x": 864,
+          "metadata_compression_budget_8x": 432,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_multi_news",
+      "examples": [
+        {
+          "input": "Write a summary of the following news articles.\n\nArticle 1: ...\nArticle 2: ...\n\nSummary:",
+          "output": "The Federal Reserve raised interest rates by 0.25 percentage points...",
+          "metadata_task_name": "multi_news",
+          "metadata_category": "summarization",
+          "metadata_task_id": "multi_news_0",
+          "metadata_original_token_count": 4567,
+          "metadata_compression_budget_2x": 2283,
+          "metadata_compression_budget_4x": 1141,
+          "metadata_compression_budget_8x": 570,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_gov_report",
+      "examples": [
+        {
+          "input": "Write a summary of the following government report.\n\nReport: ...\n\nSummary:",
+          "output": "The report outlines the agency's budget request for fiscal year 2024...",
+          "metadata_task_name": "gov_report",
+          "metadata_category": "summarization",
+          "metadata_task_id": "gov_report_0",
+          "metadata_original_token_count": 12345,
+          "metadata_compression_budget_2x": 6172,
+          "metadata_compression_budget_4x": 3086,
+          "metadata_compression_budget_8x": 1543,
+          "metadata_split": "mini",
+          "metadata_row_index": 0
+        }
+      ]
+    },
+    {
+      "dataset": "longbench_qmsum",
+      "examples": [
+        {
+          "input": "You are given a meeting transcript and a query. Answer the query based on the transcript.\n\nTranscript: ...\n\nQuery: What was the general discussion?",
+          "output": "The group discussed recognition results generated for 20 minutes of close-talking microphone data.",
+          "metadata_task_name": "qmsum",
+          "metadata_category": "summarization",
+          "metadata_task_id": "qmsum_0",
+          "metadata_original_token_count": 16862,
+          "metadata_compression_budget_2x": 8431,
+          "metadata_compression_budget_4x": 4215,
+          "metadata_compression_budget_8x": 2107,
+          "metadata_split": "holdout",
+          "metadata_row_index": 0
+        }
+      ]
+    }
+  ]
+}
